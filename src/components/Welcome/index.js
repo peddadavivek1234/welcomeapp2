@@ -5,10 +5,10 @@ class Welcome extends Component {
   state = {isSubscribe: true}
 
   onSunscribe = () => {
-      this.setState((prevState) => ({isSubscribe = true}))
+      this.setState((prevState) => ({isSubscribe: true}))
   }
   onSubscribed = () => {
-      this.setState((prevState) => ({isSubscribe = false}))
+      this.setState((prevState) => ({isSubscribe: false}))
   }
 
   render() {
@@ -17,10 +17,10 @@ class Welcome extends Component {
       return (
           <div>
               <h1>Welcome</h1>
-              <button className="button" onClick={onSunscribe}>
+              <button className="button" onClick={this.onSunscribe}>
                 Subscribe
               </button>
-              <button className="button" onClick={onSubscribed}>
+              <button className="button" onClick={this.onSubscribed}>
                 Subscribe
               </button>
           </div>
